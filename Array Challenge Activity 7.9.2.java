@@ -54,7 +54,7 @@ public class FindAll
       int count = 0;
       int index = 0;
       for (int i = 0; i < values.length; i++){
-        if (values[i] == searchedValue && i >= start)
+        if (values[i] == searchedValue && start <= values.length)
         {
             count++;
         }
