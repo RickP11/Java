@@ -17,7 +17,7 @@ public class FindLast {
       int wordLength = in.nextInt();
       boolean found = false; /* Your code goes here */
       int pos = 0/* Your code goes here */;
-      int lastIndex; 
+      int lastIndex = words.length + 1; 
       while (pos < words.length/* Your code goes here */)
       {
          if (words[pos].length() == wordLength/* Your code goes here */)
