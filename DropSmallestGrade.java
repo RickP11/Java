@@ -37,13 +37,13 @@ public class Scores
         int arraySize = 10;
         double[] inputs = new double[arraySize];
         Scanner scnr = new Scanner(System.in);
-        System.out.print("Enter a number or Enter \"Q\" to quit: ");
+        System.out.println("Enter a number or Enter \"Q\" to quit: ");
 
         int actualSize = 0;
         double userInput;
         while(scnr.hasNext())
         {
-            if(scnr.hasNextDouble())
+            if(scnr.hasNextDouble() || scnr.hasNextInt())
             {
                 if(actualSize >= inputs.length)
                 {
@@ -52,6 +52,8 @@ public class Scores
                 inputs[actualSize] = scnr.nextDouble();
                 actualSize++;
             }
+            // In the example, the provided code doesn't include the logic if user enter something
+            // that is not a double, for example a String. Added the logic for that case.
             else
             {
                 String input = scnr.next();
